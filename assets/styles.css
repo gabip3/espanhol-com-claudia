@@ -405,6 +405,18 @@ h1,h2,h3,h4{font-family:var(--font-title);font-weight:600;line-height:1.1;margin
 .footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:44px;padding-top:22px;text-align:center;
   color:rgba(255,255,255,.5);font-size:.88rem}
 
+/* Lightbox de vídeo */
+.video-modal{position:fixed;inset:0;z-index:200;background:rgba(20,10,6,.88);display:none;
+  align-items:center;justify-content:center;padding:22px}
+.video-modal.open{display:flex}
+.video-modal-inner{width:min(920px,100%)}
+.video-modal-frame{position:relative;aspect-ratio:16/9;width:100%;border-radius:16px;overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,.6);background:#000}
+.video-modal-frame iframe{width:100%;height:100%;border:0;display:block}
+.video-modal-close{position:absolute;top:14px;right:24px;background:none;border:0;color:#fff;
+  font-size:2.8rem;line-height:1;cursor:pointer;z-index:2;opacity:.9;transition:opacity .15s}
+.video-modal-close:hover{opacity:1}
+
 /* Rastro do mouse (faíscas da bandeira) */
 .cursor-spark{position:fixed;top:0;left:0;pointer-events:none;z-index:80;border-radius:50%;
   will-change:transform,opacity}
