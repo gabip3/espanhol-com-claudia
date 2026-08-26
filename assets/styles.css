@@ -416,6 +416,9 @@ h1,h2,h3,h4{font-family:var(--font-title);font-weight:600;line-height:1.1;margin
 .video-modal-close{position:absolute;top:14px;right:24px;background:none;border:0;color:#fff;
   font-size:2.8rem;line-height:1;cursor:pointer;z-index:2;opacity:.9;transition:opacity .15s}
 .video-modal-close:hover{opacity:1}
+.video-modal-yt{display:block;text-align:center;margin-top:14px;color:rgba(255,255,255,.85);
+  font-weight:700;font-size:.95rem;text-decoration:underline}
+.video-modal-yt:hover{color:#fff}
 
 /* Rastro do mouse (faíscas da bandeira) */
 .cursor-spark{position:fixed;top:0;left:0;pointer-events:none;z-index:80;border-radius:50%;

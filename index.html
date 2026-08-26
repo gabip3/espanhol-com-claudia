@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=10">
+<link rel="stylesheet" href="assets/styles.css?v=11">
 </head>
 <body>
 
@@ -575,7 +575,10 @@
 <!-- Lightbox de vídeo -->
 <div class="video-modal" id="videoModal" aria-hidden="true">
   <button class="video-modal-close" id="videoModalClose" aria-label="Fechar vídeo">&times;</button>
-  <div class="video-modal-inner"><div class="video-modal-frame" id="videoModalFrame"></div></div>
+  <div class="video-modal-inner">
+    <div class="video-modal-frame" id="videoModalFrame"></div>
+    <a class="video-modal-yt" id="videoModalYt" target="_blank" rel="noopener">Não abriu aqui? Assista no YouTube ↗</a>
+  </div>
 </div>
 
 <!-- WhatsApp flutuante -->
@@ -621,6 +624,7 @@ document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
   if(!modal) return;
   function openVideo(id){
     frame.innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen title="Vídeo"></iframe>';
+    var yt=document.getElementById('videoModalYt'); if(yt) yt.href='https://youtu.be/'+id;
     modal.classList.add('open'); document.body.style.overflow='hidden';
   }
   function closeVideo(){ modal.classList.remove('open'); frame.innerHTML=''; document.body.style.overflow=''; }
