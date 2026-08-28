@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avalie a Espanhol com Claudia</title>
+<meta name="description" content="Deixe sua avaliação no Google e ajude mais pessoas a aprenderem espanhol com a Claudia. Leva menos de 1 minuto.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#cf190c">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Espanhol com Claudia">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://www.espanholcomclaudia.com.br/avaliar/">
+<meta property="og:title" content="Deixe sua avaliação | Espanhol com Claudia">
+<meta property="og:description" content="Gostou das aulas? Deixe sua avaliação no Google, leva menos de 1 minuto. ¡Muchas gracias!">
+<meta property="og:image" content="https://www.espanholcomclaudia.com.br/assets/img/capa-video.png">
+<link rel="icon" href="../assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#cf190c; --red-dark:#9e0f05; --gold:#ffbd59; --gold-deep:#f2a52d;
+    --ink:#251712; --ink-soft:#5b4a43; --cream:#fff8ef; --line:#f0dcc4; --white:#fff;
+    --font-title:"Fredoka","Trebuchet MS",sans-serif; --font-body:"Nunito","Segoe UI",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;min-height:100%}
+  body{font-family:var(--font-body);color:var(--ink);line-height:1.6;
+    background:radial-gradient(1100px 600px at 50% -5%,#fff2df,transparent),var(--cream);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:26px 18px;min-height:100vh;-webkit-font-smoothing:antialiased}
+  .flag{position:fixed;top:0;left:0;right:0;height:6px;z-index:5;
+    background:linear-gradient(90deg,var(--red) 0 33.33%,var(--gold) 33.33% 66.66%,var(--red) 66.66% 100%)}
+
+  .card{width:100%;max-width:520px;background:var(--white);border:1px solid var(--line);
+    border-radius:30px;box-shadow:0 30px 70px rgba(120,40,10,.18);padding:44px 34px 38px;text-align:center;
+    position:relative;overflow:hidden}
+  .card::before{content:"";position:absolute;top:0;left:0;right:0;height:7px;
+    background:linear-gradient(90deg,var(--red),var(--gold))}
+
+  .logo{width:96px;height:auto;margin:6px auto 4px;display:block}
+  .brand{font-family:var(--font-title);font-weight:600;font-size:1.05rem;color:var(--ink);margin-bottom:22px}
+  .brand span{color:var(--red)}
+
+  .stars{display:flex;justify-content:center;gap:7px;margin:0 0 18px}
+  .stars svg{width:38px;height:38px;fill:var(--gold);filter:drop-shadow(0 3px 5px rgba(242,165,45,.5));
+    opacity:0;transform:scale(.4) translateY(6px);animation:pop .45s cubic-bezier(.2,1.3,.4,1) forwards}
+  .stars svg:nth-child(1){animation-delay:.05s}
+  .stars svg:nth-child(2){animation-delay:.15s}
+  .stars svg:nth-child(3){animation-delay:.25s}
+  .stars svg:nth-child(4){animation-delay:.35s}
+  .stars svg:nth-child(5){animation-delay:.45s}
+  @keyframes pop{to{opacity:1;transform:scale(1) translateY(0)}}
+
+  h1{font-family:var(--font-title);font-weight:600;font-size:clamp(1.7rem,6vw,2.2rem);line-height:1.15;
+    margin:0 0 14px;letter-spacing:-.01em}
+  h1 .hl{color:var(--red)}
+  p.lead{color:var(--ink-soft);font-size:1.08rem;margin:0 auto 30px;max-width:400px}
+  p.lead b{color:var(--ink)}
+
+  .btn{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;
+    font-family:var(--font-title);font-weight:600;font-size:1.18rem;color:#fff;background:var(--red);
+    padding:19px 24px;border-radius:999px;text-decoration:none;
+    box-shadow:0 14px 30px rgba(207,25,12,.34);transition:transform .18s,box-shadow .18s,background .18s}
+  .btn:hover{background:var(--red-dark);transform:translateY(-3px);box-shadow:0 20px 38px rgba(207,25,12,.44)}
+  .btn:active{transform:translateY(-1px)}
+  .btn .g{width:26px;height:26px;flex:none;background:#fff;border-radius:50%;padding:4px;display:grid;place-items:center}
+  .btn .g svg{width:100%;height:100%;display:block}
+
+  .note{margin-top:18px;font-weight:800;font-size:.95rem;color:var(--ink-soft);display:inline-flex;align-items:center;gap:8px}
+  .note .clock{width:20px;height:20px;fill:none;stroke:var(--gold-deep);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+
+  .thanks{margin-top:30px;padding-top:22px;border-top:1px solid var(--line)}
+  .thanks .hola{font-family:var(--font-title);font-weight:500;color:var(--gold-deep);font-size:1.15rem}
+  .thanks .sig{font-family:var(--font-title);font-weight:600;color:var(--red);font-size:1.2rem;margin-top:2px}
+
+  @media (max-width:480px){
+    .card{padding:36px 22px 30px;border-radius:26px}
+    .stars svg{width:32px;height:32px}
+    .logo{width:84px}
+  }
+</style>
+</head>
+<body>
+<div class="flag"></div>
+
+<main class="card">
+  <img class="logo" src="../assets/img/logo.png" alt="Espanhol com Claudia">
+  <div class="brand">Espanhol <span>com Claudia</span></div>
+
+  <div class="stars" aria-hidden="true">
+    <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+    <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+    <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+    <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+    <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+  </div>
+
+  <h1>Gostou de aprender <span class="hl">espanhol</span> comigo?</h1>
+  <p class="lead">Sua avaliação me ajuda demais e faz com que <b>mais pessoas</b> encontrem as aulas. Conta pra todo mundo como foi a sua experiência! </p>
+
+  <a class="btn" href="https://g.page/r/Cb3hoJHvqvhCECE/review" target="_blank" rel="noopener">
+    <span class="g"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></span>
+    Avaliar no Google
+  </a>
+
+  <div class="note">
+    <svg class="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+    Leva menos de 1 minuto
+  </div>
+
+  <div class="thanks">
+    <div class="hola">¡Muchas gracias!</div>
+    <div class="sig">Claudia</div>
+  </div>
+</main>
+
+</body>
+</html>
